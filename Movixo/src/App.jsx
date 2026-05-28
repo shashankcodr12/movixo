@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AppContext } from './lib/store.js';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
@@ -26,9 +26,9 @@ export default function App() {
         isLoggedIn, setIsLoggedIn,
       }}
     >
-      <BrowserRouter>
+      <HashRouter>
         <AppRoutes />
-      </BrowserRouter>
+        </HashRouter>
     </AppContext.Provider>
   );
 }
